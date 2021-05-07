@@ -1,0 +1,19 @@
+{
+  "name": "cleancodenode",
+  "version": "1.0.0",
+  "description": "Clean Code with Node Js and Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoNoronha0/CleanCodeNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoNoronha0/CleanCodeNode/issues"
+  },
+  "homepage": "https://github.com/GustavoNoronha0/CleanCodeNode#readme"
+}
