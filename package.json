@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GustavoNoronha0/CleanCodeNode/issues"
   },
-  "homepage": "https://github.com/GustavoNoronha0/CleanCodeNode#readme"
+  "homepage": "https://github.com/GustavoNoronha0/CleanCodeNode#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.1.0"
+  }
 }
