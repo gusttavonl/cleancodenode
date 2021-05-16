@@ -8,6 +8,7 @@
 * Editar Produtos
 * Excluir produtos
 * Buscar produto por Id
+* Relacionamentos entre usuarios e produtos
 
 > ## Princípios
 
