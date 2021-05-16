@@ -39,9 +39,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('name'))
   })
-})
 
-describe('SignUp Controller', () => {
   test('Should return 400 if no email is provided', () => {
     const { sut } = makeSut()
     const httpRequest = {
@@ -55,9 +53,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('email'))
   })
-})
 
-describe('SignUp Controller', () => {
   test('Should return 400 if no password is provided', () => {
     const { sut } = makeSut()
     const httpRequest = {
@@ -71,9 +67,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
-})
 
-describe('SignUp Controller', () => {
   test('Should return 400 if no passowrdConfirmation is provided', () => {
     const { sut } = makeSut()
     const httpRequest = {
@@ -87,9 +81,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('passowrdConfirmation'))
   })
-})
 
-describe('SignUp Controller', () => {
   test('Should return 400 if is invalid email is provided', () => {
     const { sut, emailValidatorStub } = makeSut()
     jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
@@ -105,9 +97,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new InvalidParamError('email'))
   })
-})
 
-describe('SignUp Controller', () => {
   test('Should call EmailValidator with correct email', () => {
     const { sut, emailValidatorStub } = makeSut()
     const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
@@ -122,9 +112,7 @@ describe('SignUp Controller', () => {
     sut.handle(httpRequest)
     expect(isValidSpy).toHaveBeenCalledWith('any_email@email.com')
   })
-})
 
-describe('SignUp Controller', () => {
   test('Should return 500 if EmailValidator throws', () => {
     const { sut, emailValidatorStub } = makeSut()
     jest.spyOn(emailValidatorStub, 'isValid').mockImplementationOnce(() => {
