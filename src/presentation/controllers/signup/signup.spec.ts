@@ -51,7 +51,7 @@ describe('SignUp Controller', () => {
       body: {
         email: 'any_email@email.com',
         password: 'an_password',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
@@ -65,7 +65,7 @@ describe('SignUp Controller', () => {
       body: {
         name: 'any_name',
         password: 'an_password',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
@@ -79,7 +79,7 @@ describe('SignUp Controller', () => {
       body: {
         name: 'any_name',
         email: 'any_email@email.com',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
@@ -87,7 +87,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
 
-  test('Should return 400 if no passowrdConfirmation is provided', async () => {
+  test('Should return 400 if no passwordConfirmation is provided', async () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -98,10 +98,10 @@ describe('SignUp Controller', () => {
     }
     const httpResponse = await sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamError('passowrdConfirmation'))
+    expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
   })
 
-  test('Should return 400 if passowrdConfirmation fails', async () => {
+  test('Should return 400 if passwordConfirmation fails', async () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
@@ -113,7 +113,7 @@ describe('SignUp Controller', () => {
     }
     const httpResponse = await sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamError('passowrdConfirmation'))
+    expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
   })
 
   test('Should return 400 if is invalid email is provided', async () => {
@@ -124,7 +124,7 @@ describe('SignUp Controller', () => {
         name: 'any_name',
         email: 'invalid_email@email.com',
         password: 'any_password',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
@@ -140,7 +140,7 @@ describe('SignUp Controller', () => {
         name: 'any_name',
         email: 'any_email@email.com',
         password: 'any_password',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     sut.handle(httpRequest)
@@ -157,7 +157,7 @@ describe('SignUp Controller', () => {
         name: 'any_name',
         email: 'any_email@email.com',
         password: 'any_password',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
@@ -175,7 +175,7 @@ describe('SignUp Controller', () => {
         name: 'any_name',
         email: 'any_email@email.com',
         password: 'any_password',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
@@ -191,7 +191,7 @@ describe('SignUp Controller', () => {
         name: 'any_name',
         email: 'any_email@email.com',
         password: 'any_password',
-        passowrdConfirmation: 'any_password'
+        passwordConfirmation: 'any_password'
       }
     }
     sut.handle(httpRequest)
@@ -209,7 +209,7 @@ describe('SignUp Controller', () => {
         name: 'valid_name',
         email: 'valid_email@mail.com',
         password: 'valid_password',
-        passowrdConfirmation: 'valid_password'
+        passwordConfirmation: 'valid_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
