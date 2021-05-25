@@ -209,7 +209,7 @@ describe('SignUp Controller', () => {
         name: 'valid_name',
         email: 'valid_email@mail.com',
         password: 'valid_password',
-        passowrdConfirmation: 'valid_confirmPassword'
+        passowrdConfirmation: 'valid_password'
       }
     }
     const httpResponse = await sut.handle(httpRequest)
