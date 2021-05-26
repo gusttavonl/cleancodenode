@@ -1,6 +1,7 @@
 {
   "extends": "standart-with-typescript",
-  "parserOptions":{
-    "project": "./tsconfig.json"
+
+  "env": {
+      "es6": true
   }
 }
