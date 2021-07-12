@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/GustavoNoronha0/CleanCodeNode#readme",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^2.0.1",
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^26.0.23",
+    "@types/mongodb": "^3.6.20",
     "@types/validator": "github:types/validator",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "eslint": "^7.25.0",
@@ -38,6 +41,8 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "mongodb": "^3.6.10",
     "validator": "^13.6.0"
   }
 }
